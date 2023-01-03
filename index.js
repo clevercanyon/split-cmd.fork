@@ -7,7 +7,7 @@
  *
  * @returns   Object or array containing CMD parts.
  */
-function split( cmd, to = 'object' ) {
+function splitCMD( cmd, to = 'object' ) {
     return 'array' === to ? splitToArray( cmd ) : splitToObject( cmd );
 }
 
@@ -45,11 +45,11 @@ function splitToObject( cmd ) {
     switch( arr.length ) {
         case 0:  return { cmd: '', args: [] };
         case 1:  return { cmd: arr[ 0 ], args: [] };
-        default: return { cmd: arr.slice(0, 1), args: arr.slice(1) };
+        default: return { cmd: arr[ 0 ], args: arr.slice(1) };
     }
 }
 
 /**
  * Exports.
  */
-module.exports = { split, splitToArray, splitToObject };
+module.exports = { splitCMD, splitToArray, splitToObject };
