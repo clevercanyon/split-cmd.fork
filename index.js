@@ -8,7 +8,7 @@
  * @returns   Object or array containing CMD parts.
  */
 function splitCMD( cmd, to = 'object' ) {
-    return 'array' === to ? splitToArray( cmd ) : splitToObject( cmd );
+    return 'array' === to ? splitCMDToArray( cmd ) : splitCMDToObject( cmd );
 }
 
 /**
@@ -18,7 +18,7 @@ function splitCMD( cmd, to = 'object' ) {
  *
  * @returns   Array of CMD parts.
  */
-function splitToArray( cmd ) {
+function splitCMDToArray( cmd ) {
     if ( typeof cmd !== 'string' ) {
         throw new Error( 'Command must be a string.' );
     }
@@ -39,8 +39,8 @@ function splitToArray( cmd ) {
  *
  * @returns   Object `{cmd: '', args: []}`.
  */
-function splitToObject( cmd ) {
-    const arr = splitToArray( cmd );
+function splitCMDToObject( cmd ) {
+    const arr = splitCMDToArray( cmd );
 
     switch( arr.length ) {
         case 0:  return { cmd: '', args: [] };
@@ -52,4 +52,4 @@ function splitToObject( cmd ) {
 /**
  * Exports.
  */
-module.exports = { splitCMD, splitToArray, splitToObject };
+module.exports = { splitCMD, splitCMDToArray, splitCMDToObject };
