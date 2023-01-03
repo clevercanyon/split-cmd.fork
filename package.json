@@ -1,38 +1,30 @@
 {
-  "name": "split-cmd",
+  "private": false,
+  "license": "MIT",
   "version": "1.0.1",
-  "description": "💦Split a command into an array or an object",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "jest": "^25.5.4"
-  },
-  "scripts": {
-    "test": "jest",
-    "preversion": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thiagodp/split-cmd.git"
-  },
+  "name": "@clevercanyon/split-cmd.fork",
+  "description": "Split a command into an array or an object.",
+  "repository": "https://github.com/clevercanyon/split-cmd.fork",
+  "homepage": "https://github.com/clevercanyon/split-cmd.fork#readme",
+  "bugs": "https://github.com/clevercanyon/split-cmd.fork/issues",
+  "funding": "https://github.com/sponsors/clevercanyon",
   "keywords": [
-    "split",
-    "command",
-    "argument",
-    "args",
-    "cli",
-    "spawn",
-    "exec",
-    "process",
-    "child_process"
+    "clevercanyon"
   ],
   "author": {
     "name": "Thiago Delgado Pinto",
     "email": "thiago-dp@bol.com.br"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thiagodp/split-cmd/issues"
-  },
-  "homepage": "https://github.com/thiagodp/split-cmd#readme"
+  "contributors": [
+    {
+      "name": "Clever Canyon",
+      "url": "https://clevercanyon.com"
+    }
+  ],
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {}
 }

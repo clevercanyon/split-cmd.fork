@@ -1,55 +1,55 @@
 /**
- * Split a command into an array.
+ * Splits a CMD.
  *
- * @example
- * ```js
- * var arr = split( 'git commit -m "some message with spaces"' );
- * console.log( arr ); // [ "git", "commit", "-m", "some message with spaces" ]
- * ```
+ * @param cmd CMD to split.
+ * @param to  One of: `array` or `object`.
+ *            If not given, defaults to `object`.
  *
- * @param {string} command Command to split.
- * @returns {Array}
+ * @returns   Object or array containing CMD parts.
  */
-function split( command ) {
-    if ( typeof command !== 'string' ) {
-        throw new Error( 'Command must be a string' );
-    }
+function split( cmd, to = 'object' ) {
+    return 'array' === to ? splitToArray( cmd ) : splitToObject( cmd );
+}
 
-    var r = command.match( /[^"\s]+|"(?:\\"|[^"])*"/g );
-    if ( ! r ) {
-        return [];
+/**
+ * Splits a CMD into an array.
+ *
+ * @param cmd CMD to split into an array.
+ *
+ * @returns   Array of CMD parts.
+ */
+function splitToArray( cmd ) {
+    if ( typeof cmd !== 'string' ) {
+        throw new Error( 'Command must be a string.' );
     }
+    const m = cmd.match( /[^'"\s]+|'(?:\\'|[^'])*'|"(?:\\"|[^"])*"/ug ) || [];
 
-    return r.map( function ( expr ) {
-        var isQuoted = expr.charAt( 0 ) === '"' && expr.charAt( expr.length - 1 ) === '"';
-        return isQuoted ? expr.slice( 1, -1 ) : expr;
+    return m.map( ( m ) => {
+        return (m.charAt( 0 ) === "'" && m.charAt( m.length - 1 ) === "'")
+            || (m.charAt( 0 ) === '"' && m.charAt( m.length - 1 ) === '"')
+            ? m.slice( 1, -1 )
+            : m;
     } );
 }
 
 /**
- * Split a command into an object with the attributes `command` and `args`.
+ * Splits a CMD into an object.
  *
- * @example
- * ```js
- * var obj = splitToObject( 'git commit -m "some message with spaces"' );
- * console.log( obj.command ); // git
- * console.log( obj.args ); // [ "commit", "-m", "some message with spaces" ]
- * ```
+ * @param cmd CMD to split into an object.
  *
- * @param {string} command Command to split.
- * @returns {object}
+ * @returns   Object `{cmd: '', args: []}`.
  */
-function splitToObject( command ) {
-    var cmds = split( command );
-    switch( cmds.length ) {
-        case 0: return {};
-        case 1: return { command: cmds[ 0 ] };
-        default: {
-            var first = cmds[ 0 ];
-            cmds.shift();
-            return { command: first, args: cmds };
-        }
+function splitToObject( cmd ) {
+    const arr = splitToArray( cmd );
+
+    switch( arr.length ) {
+        case 0:  return { cmd: '', args: [] };
+        case 1:  return { cmd: arr[ 0 ], args: [] };
+        default: return { cmd: arr.slice(0, 1), args: arr.slice(1) };
     }
 }
 
-module.exports = { split, splitToObject };
+/**
+ * Exports.
+ */
+module.exports = { split, splitToArray, splitToObject };
