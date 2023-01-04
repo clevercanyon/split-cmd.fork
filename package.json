@@ -4,7 +4,7 @@
     "access": "public"
   },
   "license": "MIT",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "@clevercanyon/split-cmd.fork",
   "description": "Split a command into an array or an object.",
   "repository": "https://github.com/clevercanyon/split-cmd.fork",
