@@ -1,32 +1,80 @@
 {
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
-  "license": "MIT",
-  "version": "1.0.7",
-  "name": "@clevercanyon/split-cmd.fork",
-  "description": "Split a command into an array or an object.",
-  "repository": "https://github.com/clevercanyon/split-cmd.fork",
-  "homepage": "https://github.com/clevercanyon/split-cmd.fork#readme",
-  "bugs": "https://github.com/clevercanyon/split-cmd.fork/issues",
-  "funding": "https://github.com/sponsors/clevercanyon",
-  "keywords": [
-    "clevercanyon"
-  ],
-  "author": {
-    "name": "Thiago Delgado Pinto",
-    "email": "thiago-dp@bol.com.br"
-  },
-  "contributors": [
-    {
-      "name": "Clever Canyon",
-      "url": "https://clevercanyon.com"
-    }
-  ],
-  "files": [
-    "/index.js"
-  ],
-  "main": "./index.js",
-  "unpkg": "./index.js"
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"version": "1.0.7",
+	"license": "MIT",
+	"name": "@clevercanyon/split-cmd.fork",
+	"description": "Split a command into an array or an object.",
+	"repository": "https://github.com/clevercanyon/split-cmd.fork",
+	"homepage": "https://github.com/clevercanyon/split-cmd.fork#readme",
+	"bugs": "https://github.com/clevercanyon/split-cmd.fork/issues",
+	"funding": "https://github.com/sponsors/clevercanyon",
+	"keywords": ["clevercanyon"],
+	"author": {
+		"name": "Thiago Delgado Pinto",
+		"email": "thiago-dp@bol.com.br"
+	},
+	"contributors": [
+		{
+			"name": "Clever Canyon",
+			"url": "https://clevercanyon.com"
+		}
+	],
+	"type": "commonjs",
+	"files": ["/index.js"],
+	"bin": {},
+	"imports": {},
+	"exports": {
+		".": "./index.js"
+	},
+	"sideEffects": [],
+	"module": "",
+	"main": "./index.js",
+	"browser": "",
+	"unpkg": "./index.js",
+	"types": "",
+	"typesVersions": {},
+	"dependencies": {},
+	"peerDependencies": {},
+	"peerDependenciesMeta": {},
+	"optionalDependencies": {},
+	"bundleDependencies": [],
+	"devDependencies": {
+		"@clevercanyon/skeleton-dev-deps": "^1.0.91"
+	},
+	"overrides": {},
+	"workspaces": [],
+	"cpu": ["x64", "arm64"],
+	"os": ["darwin", "linux"],
+	"engines": {
+		"node": "^19.2.0 || ^19.4.0",
+		"npm": "^8.19.3 || ^9.2.0"
+	},
+	"config": {
+		"c10n": {
+			"&": {
+				"dotfiles": {
+					"lock": []
+				},
+				"build": {
+					"appType": "",
+					"targetEnv": ""
+				},
+				"github": {
+					"teams": {
+						"engineers": "pull",
+						"architects": "push"
+					},
+					"labels": {},
+					"configVersion": "",
+					"envsVersion": ""
+				},
+				"npmjs": {
+					"configVersions": ""
+				}
+			}
+		}
+	}
 }
