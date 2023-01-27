@@ -3,7 +3,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"license": "MIT",
 	"name": "@clevercanyon/split-cmd.fork",
 	"description": "Split a command into an array or an object.",
@@ -11,7 +11,9 @@
 	"homepage": "https://github.com/clevercanyon/split-cmd.fork#readme",
 	"bugs": "https://github.com/clevercanyon/split-cmd.fork/issues",
 	"funding": "https://github.com/sponsors/clevercanyon",
-	"keywords": ["clevercanyon"],
+	"keywords": [
+		"clevercanyon"
+	],
 	"author": {
 		"name": "Thiago Delgado Pinto",
 		"email": "thiago-dp@bol.com.br"
@@ -23,7 +25,9 @@
 		}
 	],
 	"type": "commonjs",
-	"files": ["/index.js"],
+	"files": [
+		"/index.js"
+	],
 	"bin": {},
 	"imports": {},
 	"exports": {
@@ -46,8 +50,14 @@
 	},
 	"overrides": {},
 	"workspaces": [],
-	"cpu": ["x64", "arm64"],
-	"os": ["darwin", "linux"],
+	"cpu": [
+		"x64",
+		"arm64"
+	],
+	"os": [
+		"darwin",
+		"linux"
+	],
 	"engines": {
 		"node": "^19.2.0 || ^19.4.0",
 		"npm": "^8.19.3 || ^9.2.0"
