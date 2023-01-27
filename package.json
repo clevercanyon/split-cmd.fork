@@ -3,7 +3,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"version": "1.0.10",
+	"version": "1.0.11",
 	"license": "MIT",
 	"name": "@clevercanyon/split-cmd.fork",
 	"description": "Split a command into an array or an object.",
@@ -11,9 +11,7 @@
 	"homepage": "https://github.com/clevercanyon/split-cmd.fork#readme",
 	"bugs": "https://github.com/clevercanyon/split-cmd.fork/issues",
 	"funding": "https://github.com/sponsors/clevercanyon",
-	"keywords": [
-		"clevercanyon"
-	],
+	"keywords": ["clevercanyon"],
 	"author": {
 		"name": "Thiago Delgado Pinto",
 		"email": "thiago-dp@bol.com.br"
@@ -25,9 +23,7 @@
 		}
 	],
 	"type": "commonjs",
-	"files": [
-		"/index.js"
-	],
+	"files": ["/index.js"],
 	"bin": {},
 	"imports": {},
 	"exports": null,
@@ -35,7 +31,7 @@
 	"module": "",
 	"main": "./index.js",
 	"browser": "",
-	"unpkg": "./index.js",
+	"unpkg": "",
 	"types": "",
 	"typesVersions": {},
 	"dependencies": {},
@@ -44,18 +40,12 @@
 	"optionalDependencies": {},
 	"bundleDependencies": [],
 	"devDependencies": {
-		"@clevercanyon/skeleton-dev-deps": "^1.0.91"
+		"@clevercanyon/skeleton-dev-deps": "^1.0.99"
 	},
 	"overrides": {},
 	"workspaces": [],
-	"cpu": [
-		"x64",
-		"arm64"
-	],
-	"os": [
-		"darwin",
-		"linux"
-	],
+	"cpu": ["x64", "arm64"],
+	"os": ["darwin", "linux"],
 	"engines": {
 		"node": "^19.2.0 || ^19.4.0",
 		"npm": "^8.19.3 || ^9.2.0"
@@ -76,11 +66,11 @@
 						"architects": "push"
 					},
 					"labels": {},
-					"configVersion": "",
+					"configVersion": "1.0.1",
 					"envsVersion": ""
 				},
 				"npmjs": {
-					"configVersions": ""
+					"configVersions": "1.0.1,1.0.0"
 				}
 			}
 		}
