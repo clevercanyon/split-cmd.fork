@@ -23,7 +23,7 @@
 		}
 	],
 	"type": "commonjs",
-	"files": ["/index.js"],
+	"files": ["/index.js", "/index.d.ts"],
 	"bin": {},
 	"imports": {},
 	"exports": null,
@@ -32,7 +32,7 @@
 	"main": "./index.js",
 	"browser": "",
 	"unpkg": "",
-	"types": "",
+	"types": "./index.d.ts",
 	"typesVersions": {},
 	"dependencies": {},
 	"peerDependencies": {},
