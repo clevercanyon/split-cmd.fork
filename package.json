@@ -3,7 +3,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"version": "1.0.40",
+	"version": "1.0.41",
 	"license": "MIT",
 	"name": "@clevercanyon/split-cmd.fork",
 	"description": "Split a command into an array or an object.",
@@ -40,7 +40,7 @@
 	"optionalDependencies": {},
 	"bundleDependencies": [],
 	"devDependencies": {
-		"@clevercanyon/skeleton-dev-deps": "^1.0.162"
+		"@clevercanyon/dev-deps": "^1.0.167"
 	},
 	"overrides": {},
 	"cpu": ["x64", "arm64"],
