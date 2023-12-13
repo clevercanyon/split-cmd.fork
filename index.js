@@ -39,7 +39,7 @@ function splitCMDToObject(cmd) {
  */
 function splitCMDToArray(cmd) {
 	if (typeof cmd !== 'string') {
-		throw new Error('Command must be a string.');
+		throw Error('Command must be a string.');
 	}
 	const m = cmd.match(/[^'"\s]+|'(?:\\'|[^'])*'|"(?:\\"|[^"])*"/gu) || [];
 
